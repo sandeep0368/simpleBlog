@@ -1,3 +1,4 @@
+<?php echo view('templates/header') ?>
 <div class="container">
     <div class="card mt-2">
         <div class="card-header">
@@ -38,8 +39,8 @@
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="intrest">Intrest</label>
-                            <input type="number" class="form-control" name="intrest" id="intrest" placeholder="Intrest">
+                            <label for="interest">Interest</label>
+                            <input type="number" class="form-control" name="interest" id="inetrest" placeholder="Interest">
                         </div>
                     </div>
                 </div>
@@ -62,12 +63,7 @@
         </div>
     </div>
 </div>
-
 <script>
-    $('#datepicker').datepicker({
-        uiLibrary: 'bootstrap4'
-    });
-    $('#datepicker1').datepicker({
-        uiLibrary: 'bootstrap4'
-    });
+    
 </script>
+<?php echo view('templates/footer') ?>
