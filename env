@@ -14,7 +14,7 @@
 # ENVIRONMENT
 #--------------------------------------------------------------------
 
-# CI_ENVIRONMENT = development
+CI_ENVIRONMENT = development
 
 #--------------------------------------------------------------------
 # APP
@@ -38,9 +38,9 @@ app.baseURL = 'http://localhost:8080/'
 #--------------------------------------------------------------------
 
 database.default.hostname = localhost
-database.default.database = client
-database.default.username = root
-database.default.password = Kancha0368
+database.default.database = micro_finance
+database.default.username = jack
+database.default.password = myPassword
 database.default.DBDriver = MySQLi
 database.default.DBPrefix =
 
