@@ -40,4 +40,10 @@ class Validation
 	//--------------------------------------------------------------------
 	// Rules
 	//--------------------------------------------------------------------
+	public $add_customer = [
+		'username'     => 'required',
+		'password'     => 'required',
+		'pass_confirm' => 'required|matches[password]',
+		'email'        => 'required|valid_email'
+	];
 }
