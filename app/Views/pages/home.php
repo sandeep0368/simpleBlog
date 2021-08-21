@@ -1,8 +1,8 @@
+<?php echo view('templates/header') ?>
 <div class="container mt-5">
     <div class="card">
         <h5 class="card-header">TOTAL AMOUNT : <b>5,00,000</b></h5>
     </div>
-
     <div class="mt-2 ">
         <form action="/action_page.php">
             <div class="form-group d-inline">
@@ -11,9 +11,6 @@
             </div>
         </form>
     </div>
-
-
-
     <table class="table table-hover mt-1">
         <thead>
             <tr>
@@ -26,33 +23,21 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>+91 9502960368</td>
-                <td>5,000</td>
-                <td>2%</td>
-                <td>45 Days</td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>+91 9502960368</td>
-                <td>6,000</td>
-                <td>4%</td>
-                <td>45 Days</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Larry the Bird</td>
-                <td>+91 9502960368</td>
-                <td>8,000</td>
-                <td>3%</td>
-                <td>45 Days</td>
-            </tr>
+            <?php foreach ($data as $item) : ?>
+
+                <tr>
+                    <th scope="row"><?php echo $item['id']; ?></th>
+                    <td><?php echo $item['name']; ?></td>
+                    <td><?php echo $item['mobile_no']; ?></td>
+                    <td><?php echo $item['taken_amount']; ?></td>
+                    <td><?php echo $item['interest']; ?></td>
+                    <td><?php echo $item['days']; ?></td>
+                </tr>
+            <?php endforeach; ?>
         </tbody>
     </table>
     <div class="card mt-3">
         <h5 class="card-header">TOTAL INTEREST : <b>20,000</b> <span class="float-right">TOTAL AMOUNT : <b>5,20,000</b></span></h5>
     </div>
 </div>
+<?php echo view('templates/footer') ?>
