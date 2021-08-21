@@ -4,11 +4,11 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class Customer extends Migration
+class AddCustomer extends Migration
 {
 	public function up()
 	{
-		$this->forge->addField('id primary key auto increament');
+		$this->forge->addField('id int primary key auto_increment');
 		$this->forge->addField("first_name varchar(20)");
 		$this->forge->addField("last_name varchar(20)");
 		$this->forge->addField("mobile_no varchar(20)");
@@ -21,6 +21,6 @@ class Customer extends Migration
 
 	public function down()
 	{
-		$this->forge->dropTable('customers', TRUE);
+		$this->forge->dropTable('customers');
 	}
 }
